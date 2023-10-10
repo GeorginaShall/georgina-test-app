@@ -75,10 +75,6 @@ export default function TabOneScreen() {
       {categories.map((category, index) => (
         <HorizontalScrollProductList key={index} category={category} />
       ))}
-      {/* Add more content here if needed */}
-      {/* <View style={styles.additionalContent}>
-        <Text>Additional Content Goes Here</Text>
-      </View> */}
     </ScrollView>
   );
 }
@@ -88,7 +84,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  //  padding: 20, 
+    //padding: 20, 
     backgroundColor: '#FFFBFB'
   },
   // additionalContent: {

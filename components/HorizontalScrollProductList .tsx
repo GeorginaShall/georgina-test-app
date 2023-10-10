@@ -30,8 +30,8 @@ const HorizontalScrollProductList: React.FC<HorizontalScrollProductListProps> = 
       <View style={styles.container}>
         <Text style={styles.sectionTitle}>{categoryName}</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {products.map(product => (
-            <ProductCard key={product.id} product={product} />
+        {products.map((product, index) => (
+            <ProductCard key={product.id} product={product} index={index} />
           ))}
         </ScrollView>
       </View>
@@ -40,10 +40,13 @@ const HorizontalScrollProductList: React.FC<HorizontalScrollProductListProps> = 
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    //padding: 16,
     height: 380,
+    marginBottom:10,
   },
   sectionTitle: {
+    paddingTop:15,
+    paddingLeft:25,
     fontSize: 18,
     fontWeight: 'bold',
     color: '#b47cec',

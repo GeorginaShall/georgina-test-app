@@ -13,9 +13,10 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  index: number;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product , index }) => {
   const { image, title, description, price } = product;
   //const { addToCart } = useCartContext();
   const { addToCart, cartItems } = useCartContext();
@@ -26,8 +27,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     console.log('Cart items:', cartItems);
   };
 
+  const cardStyles = [
+    styles.productCard,
+    index === 0 ? styles.firstProductCard : null // Apply padding only to the first product card
+  ];
+
   return (
-    <View style={styles.productCard}>
+    <View  style={cardStyles}>
       <Image source={image} style={styles.productImage} resizeMode="cover" />
       <Text style={styles.productTitle}>{title}</Text>
       <Text style={styles.productDescription}>{description}</Text>
@@ -42,13 +48,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 const styles = StyleSheet.create({
    
    productCard: {
-      marginRight: 16,
+      marginRight: 20,
       width: 200, 
       backgroundColor: '#fff',
       borderWidth: 0.2,
       borderColor: 'pink',
       borderRadius: 10,
       padding: 10,
+    },
+    firstProductCard: {
+      marginLeft: 25,
     },
     productImage: {
       width: '100%',
