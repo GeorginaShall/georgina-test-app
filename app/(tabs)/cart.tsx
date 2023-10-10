@@ -104,7 +104,7 @@ import CartItem from '../../components/CartItem';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 
-const CartPage = () => {
+const Cart = () => {
 
 
   const { cartItems, addToCart, incrementQuantity, decrementQuantity, removeFromCart } = useCartContext();
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CartPage;
+export default Cart;

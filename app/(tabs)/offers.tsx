@@ -14,7 +14,7 @@ const images = [
   { uri: require('../../assets/images/toy5-removebg-preview.png'), title: 'Toy 5' },
   ];
 
-export default function TabTwoScreen() {
+export default function Offers() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.imageContainer}>

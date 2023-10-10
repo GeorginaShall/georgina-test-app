@@ -139,6 +139,34 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="orders"
+        options={{
+          title: "Order History",       
+          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+          headerLeft: () => <TouchableOpacity onPress={() => navigation.goBack()}>
+          <FontAwesome5 name="arrow-left" size={24} color='#b47cec' style={{ marginLeft: 15 }} />
+        </TouchableOpacity>,
+          headerRight: () => (
+            <Link href="/" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <View style={styles.container}>
+                    <TouchableOpacity>
+                      <FontAwesome5
+                        name="search"
+                        size={24}
+                        color='pink'
+                        style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                      />
+                    </TouchableOpacity>
+                  </View>
+                )}
+              </Pressable>
+            </Link>
+          ),
+        }}
+      />
     </Tabs>
   );
 }

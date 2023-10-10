@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import HorizontalScrollProductList from '../../components/HorizontalScrollProductList ';
 
-export default function TabOneScreen() {
+export default function Index() {
   const categories = [
     {
       categoryName: 'Food',
