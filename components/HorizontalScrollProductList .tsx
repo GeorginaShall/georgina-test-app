@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import ProductCard from './ProductCard';
+import { useCartContext } from './CartContext';
 
 interface Product {
     id: number;
@@ -17,10 +18,13 @@ interface Product {
   
   interface HorizontalScrollProductListProps {
     category: Category;
+    
   }
 
 const HorizontalScrollProductList: React.FC<HorizontalScrollProductListProps> = ({ category }) => {
     const { categoryName, products } = category;
+    const { addToCart } = useCartContext(); 
+    
   
     return (
       <View style={styles.container}>

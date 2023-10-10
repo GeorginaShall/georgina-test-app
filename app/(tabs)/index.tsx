@@ -34,14 +34,14 @@ export default function TabOneScreen() {
       categoryName: 'Food on sale',
       products: [
         {
-          id: 1,
+          id: 4,
           image: require('../../assets/images/food2-removebg-preview.png'),
           title: 'Food Product 1',
           description: 'Description for food Product 1',
           price: '$99.99',
         },
         {
-          id: 2,
+          id: 5,
           image: require('../../assets/images/food5-removebg-preview.png'),
           title: 'Food Product 2',
           description: 'Description for food Product 2',
@@ -53,14 +53,14 @@ export default function TabOneScreen() {
       categoryName: 'Others',
       products: [
         {
-          id: 1,
+          id: 6,
           image: require('../../assets/images/food6-removebg-preview.png'),
           title: 'Other Food Product 1',
           description: 'Description for food Product 1',
           price: '$29.99',
         },
         {
-          id: 2,
+          id: 7,
           image: require('../../assets/images/food3-removebg-preview.png'),
           title: 'Other Food Product 2',
           description: 'Description for food Product 2',
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20, 
+  //  padding: 20, 
     backgroundColor: '#FFFBFB'
   },
   // additionalContent: {

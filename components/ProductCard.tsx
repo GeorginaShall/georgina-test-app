@@ -1,6 +1,7 @@
 import { FontAwesome } from '@expo/vector-icons';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useCartContext } from './CartContext';
 
 interface Product {
   id: number;
@@ -16,21 +17,27 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { image, title, description, price } = product;
+  //const { addToCart } = useCartContext();
+  const { addToCart, cartItems } = useCartContext();
 
-  
+  const handleAddToCart = () => {
+    addToCart(product);
+    console.log('Item added to cart:', product);
+    console.log('Cart items:', cartItems);
+  };
+
   return (
     <View style={styles.productCard}>
       <Image source={image} style={styles.productImage} resizeMode="cover" />
       <Text style={styles.productTitle}>{title}</Text>
       <Text style={styles.productDescription}>{description}</Text>
       <Text style={styles.productPrice}>{price}</Text>
-      <TouchableOpacity style={styles.cartIconContainer}>
+      <TouchableOpacity style={styles.cartIconContainer} onPress={handleAddToCart}>
         <FontAwesome name="shopping-cart" size={24} color="#fff" />
       </TouchableOpacity>
     </View>
   );
 };
-
 
 const styles = StyleSheet.create({
    
