@@ -59,7 +59,9 @@ const Orders = () => {
       <Text style={styles.data}>{item.paymentStatus}</Text>
       <Text style={styles.data}>{item.fulfilledStatus}</Text>
       <Text style={styles.data}>${item.total}</Text>  
-      <Link href={{ pathname: '/OrderDetails', state: { order: item } }}>
+      <Link href={{ pathname: '/OrderDetails'
+      //, state: { order: item }
+       }}>
         <View style={styles.idUnderlineMore}>
           <Text style={ styles.idstyle}>
             More Details
