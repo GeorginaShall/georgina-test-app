@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { CartProvider } from '../components/CartContext';
 import { createStackNavigator } from '@react-navigation/stack';
-import OrderDetails from './pages/OrderDetails'
+//import OrderDetails from './pages/OrderDetails'
 export {
   ErrorBoundary,
 } from 'expo-router';

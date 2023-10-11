@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import React, { useState } from 'react';
 import { TouchableOpacity, View, Text, FlatList, StyleSheet } from 'react-native';
+//import { router  } from 'expo-router';
 
 interface Order {
   id: number;
@@ -9,7 +10,9 @@ interface Order {
   fulfilledStatus: string;
   total: number;
 }
-
+// function navigatetoDetails() {
+//   router.replace('/OrderDetails');
+// }
 
 const Orders = () => {
   const [orderHistory, setOrderHistory] = useState([
@@ -68,6 +71,9 @@ const Orders = () => {
           </Text>
         </View>
       </Link>
+      {/* <TouchableOpacity onPress={navigatetoDetails}>
+      <Text>Go to Offers</Text>
+    </TouchableOpacity> */}
     </View>
   </View>
 </>
